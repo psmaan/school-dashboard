@@ -2309,3 +2309,79 @@ h4.cas {
   height: 30px;
   background-color: #30f800;
 }
+
+.profile-matrix-container {
+  background-color: #f6fafe;
+  border-radius: 16px;
+  height: 500px;
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-matrix {
+  width: 95%;
+  height: 90%;
+  background-color: white;
+  border: 1px solid #e6e6e6;
+}
+
+.profile-matrix-navbar {
+  width: 90%;
+  margin: auto;
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.matrix-selection > button {
+  border: none;
+  border-radius: 5px;
+  padding: 5px 10px;
+  background-color: transparent;
+  color: #1b1bb7;
+}
+
+.matrix-grid-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+}
+
+.matrix-legend-grid {
+  width: 8%;
+  background-color: blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(10, 40px);
+}
+
+.matrix-grid {
+  background-color: red;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: repeat(10, 40px);
+}
+
+.matrix-grid-row {
+  background-color: #e3ddfe;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.matrix-grid-row > h3 {
+  margin-left: 5%;
+}
+
+.matrix-graph {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: white;
+}
