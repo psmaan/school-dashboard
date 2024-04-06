@@ -37,13 +37,13 @@ h4 {
   display: flex;
   width: 50%;
   flex-direction: row;
+  align-items: flex-end;
   border-top-left-radius: 20px;
 }
 
 .male-enrolled > img {
   height: 350px;
   position: relative;
-  top: -100px;
   left: 10%;
 }
 
@@ -53,20 +53,22 @@ h4 {
   display: flex;
   flex-direction: row;
   border-top-right-radius: 20px;
+  align-items: center;
 }
 
 .female-enrolled > img {
   height: 350px;
   position: relative;
-  top: -100px;
+  top: -50px;
 }
 
 .enrolled-data {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
   margin-bottom: 30px;
+  height: 200px;
 }
 
 .enrolled-data > h1 {
@@ -77,15 +79,15 @@ h4 {
 }
 
 .enrolled-data > h2 {
-  font-size: 15px;
+  font-size: 18px;
   padding-bottom: 5px;
   font-weight: 100;
 }
 
 .enrolled-data > div {
+  transform: scale(0.9);
   background-color: #e2edfd;
   border-radius: 20px;
-  margin-left: 20px;
   width: 100%;
 }
 
@@ -101,8 +103,6 @@ h4 {
   justify-content: center;
   align-items: center;
   background-color: #fbe1f9;
-  margin-left: 0;
-  margin-right: 50px;
 }
 
 /* Employee Payroll */
@@ -118,7 +118,7 @@ h4 {
 }
 
 .payroll-chart-container {
-  width: 80%;
+  width: 72%;
   height: 100%;
   background-color: #f6fafe;
   border-radius: 20px;
@@ -157,21 +157,26 @@ h4 {
 
 .green-icon {
   height: 15px;
-  width: 15px;
+  width: 30px;
   background-color: #76e861;
+  position: relative;
+  border-radius: 15px;
+  left: -10px;
 }
 
 .grey-icon {
   height: 15px;
-  width: 15px;
+  width: 30px;
   background-color: #646464;
+  position: relative;
+  left: -10px;
+  border-radius: 15px;
 }
 
 .payroll-bar-chart {
-  background-color: red;
   width: 100%;
   height: 80%;
-  margin-top: 5%;
+  margin-top: 5px;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -181,24 +186,106 @@ h4 {
   width: 100%;
   display: grid;
   grid-template-columns: repeat(20, 1fr);
-  grid-template-rows: repeat(1, 100%);
+  grid-template-rows: 100%;
   grid-gap: 10px;
   grid-auto-flow: column;
   height: 80%;
-  background-color: blue;
-  position: relative;
-  top: -50px;
+  align-items: end;
 }
 
 .graph-bar {
   background-color: #76e861;
+  margin: 0 auto;
+  width: 50%;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.graph-bar.a {
+  height: 50%;
+}
+
+.graph-bar.b {
+  height: 20%;
+}
+
+.graph-bar.c {
+  height: 44%;
+}
+
+.graph-bar.d {
+  height: 84%;
+}
+
+.graph-bar.e {
+  height: 32%;
+}
+
+.graph-bar.f {
+  height: 16%;
+}
+
+.graph-bar.g {
+  height: 19%;
+}
+
+.graph-bar.h {
+  height: 27%;
+}
+
+.graph-bar.i {
+  height: 90%;
+}
+
+.graph-bar.j {
+  height: 50%;
+}
+
+.graph-bar.k {
+  height: 50%;
+}
+
+.graph-bar.l {
+  height: 50%;
+}
+
+.graph-bar.m {
+  height: 50%;
+}
+
+.graph-bar.n {
+  height: 50%;
+}
+
+.graph-bar.o {
+  height: 50%;
+}
+
+.graph-bar.p {
+  height: 50%;
+}
+
+.graph-bar.q {
+  height: 50%;
+}
+
+.graph-bar.r {
+  height: 50%;
+}
+
+.graph-bar-inside {
+  height: 50%;
   width: 100%;
-  height: 10px;
+  background-color: #e6e6e6;
+  border-radius: 20px;
+  margin-top: auto;
 }
 
 .payroll-bar-chart > .horizontal-bar {
-  width: 90%;
-  height: 3px;
+  width: 99%;
+  height: 1px;
   margin: auto;
   color: white;
   border-radius: 5px;
@@ -215,14 +302,13 @@ h4 {
 
 .employee-bar {
   font-size: 10px;
+  display: flex;
 }
 
 .payroll-stats-heading {
   background-color: #535353;
   height: 100%;
   width: 5%;
-  position: relative;
-  left: -20px;
   z-index: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -234,29 +320,67 @@ h4 {
 }
 
 .payroll-stats-heading > div {
-  height: 10px;
-  width: 2px;
-  background-color: red;
+  height: 50px;
+  width: 1px;
+  margin: 65px 0;
+  background-color: white;
 }
 
 .payroll-stats-heading > h3 {
+  color: white;
+  font-size: 25px;
+  width: 200px;
   transform: rotate(90deg);
+  position: relative;
+  top: 25px;
 }
 
 .payroll-stats {
   display: flex;
   flex-direction: column;
+  width: 20%;
+  margin: auto;
+  align-items: flex-end;
+}
+
+.payroll-stats > div > h1 {
+  font-size: 50px;
+}
+
+.payroll-stats > div > h3 {
+  font-size: 20px;
 }
 
 .generated-payroll {
   color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.generated-payroll > h3 {
+  color: white;
 }
 
 .paid-payroll {
   color: #30f800;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.paid-payroll > h3 {
+  color: #30f800;
 }
 
 .pending-payroll {
+  color: #ff5a5a;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.pending-payroll > h3 {
   color: #ff5a5a;
 }
 
@@ -269,6 +393,10 @@ h4 {
   margin: auto;
   margin-top: 20px;
   border-radius: 20px;
+}
+
+.master-fee-container > * {
+  color: #8b8b8b;
 }
 
 .master-fee-navbar {
@@ -285,6 +413,17 @@ h4 {
   align-items: center;
   width: 100%;
   height: 80%;
+}
+
+.master-fee-selection > * {
+  color: #8b8b8b;
+}
+
+.master-fee-selection > select {
+  background-color: transparent;
+  border: 1px solid #8b8b8b;
+  padding: 5px 10px;
+  border-radius: 3px;
 }
 
 .fee-overview {
@@ -1163,6 +1302,245 @@ h4.cas {
   margin: auto;
   height: 150px;
   margin-top: 10px;
+}
+
+.chart-skills {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.chart-skills *,
+.chart-skills::before {
+  box-sizing: border-box;
+}
+
+/* CHART-SKILLS STYLES
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+
+.chart-skills {
+  position: relative;
+  width: 350px;
+  height: 175px;
+  overflow: hidden;
+  transform: scale(0.7);
+  background-color: red;
+}
+
+.chart-skills::before,
+.chart-skills::after {
+  position: absolute;
+}
+
+.chart-skills::before {
+  content: "";
+  width: inherit;
+  height: inherit;
+  border: 45px solid rgba(211, 211, 211, 0.3);
+  border-bottom: none;
+  border-top-left-radius: 175px;
+  border-top-right-radius: 175px;
+}
+
+.chart-skills::after {
+  content: "Top Skills";
+  left: 50%;
+  bottom: 10px;
+  transform: translateX(-50%);
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: cadetblue;
+}
+
+.chart-skills li {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: inherit;
+  height: inherit;
+  border: 45px solid;
+  border-top: none;
+  border-bottom-left-radius: 175px;
+  border-bottom-right-radius: 175px;
+  transform-origin: 50% 0;
+  transform-style: preserve-3d;
+  backface-visibility: hidden;
+  animation-fill-mode: forwards;
+  animation-duration: 0.4s;
+  animation-timing-function: linear;
+}
+
+.chart-skills li:nth-child(1) {
+  z-index: 6;
+  border-color: green;
+  animation-name: rotate-one;
+}
+
+.chart-skills li:nth-child(2) {
+  z-index: 5;
+  border-color: firebrick;
+  animation-name: rotate-two;
+  animation-delay: 0.4s;
+}
+
+.chart-skills li:nth-child(3) {
+  z-index: 4;
+  border-color: steelblue;
+  animation-name: rotate-three;
+  animation-delay: 0.8s;
+}
+
+.chart-skills li:nth-child(4) {
+  z-index: 3;
+  border-color: orange;
+  animation-name: rotate-four;
+  animation-delay: 1.2s;
+}
+
+.chart-skills li:nth-child(5) {
+  z-index: 2;
+  border-color: black;
+  animation-name: rotate-five;
+  animation-delay: 1.2s;
+}
+
+.chart-skills li:nth-child(6) {
+  z-index: 1;
+  border-color: #30f800;
+  animation-name: rotate-six;
+  animation-delay: 1.2s;
+}
+
+.chart-skills span {
+  position: absolute;
+  font-size: 0.85rem;
+  backface-visibility: hidden;
+  animation: fade-in 0.4s linear forwards;
+}
+
+.chart-skills li:nth-child(1) span {
+  top: 5px;
+  left: 10px;
+  transform: rotate(-21.6deg);
+}
+
+.chart-skills li:nth-child(2) span {
+  top: 20px;
+  left: 10px;
+  transform: rotate(-79.2deg);
+  animation-delay: 0.4s;
+}
+
+.chart-skills li:nth-child(3) span {
+  top: 18px;
+  left: 10px;
+  transform: rotate(-140.4deg);
+  animation-delay: 0.8s;
+}
+
+.chart-skills li:nth-child(4) span {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-160deg);
+  animation-delay: 1.2s;
+}
+
+.chart-skills li:nth-child(5) span {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-170deg);
+  animation-delay: 1.2s;
+}
+
+.chart-skills li:nth-child(6) span {
+  top: 10px;
+  left: 10px;
+  transform: rotate(-180deg);
+  animation-delay: 1.2s;
+}
+
+@keyframes rotate-one {
+  100% {
+    transform: rotate(21.6deg);
+    /**
+       * 12% => 21.6deg
+       */
+  }
+}
+
+@keyframes rotate-two {
+  0% {
+    transform: rotate(21.6deg);
+  }
+  100% {
+    transform: rotate(79.2deg);
+    /**
+       * 32% => 57.6deg 
+       * 57.6 + 21.6 => 79.2deg
+       */
+  }
+}
+
+@keyframes rotate-three {
+  0% {
+    transform: rotate(79.2deg);
+  }
+  100% {
+    transform: rotate(140.4deg);
+    /**
+       * 34% => 61.2deg 
+       * 61.2 + 79.2 => 140.4deg
+       */
+  }
+}
+
+@keyframes rotate-four {
+  0% {
+    transform: rotate(140.4deg);
+  }
+  100% {
+    transform: rotate(160deg);
+    /**
+       * 22% => 39.6deg  
+       * 140.4 + 39.6 => 180deg
+       */
+  }
+}
+
+@keyframes rotate-five {
+  0% {
+    transform: rotate(160deg);
+  }
+  100% {
+    transform: rotate(170deg);
+    /**
+         * 22% => 39.6deg  
+         * 140.4 + 39.6 => 180deg
+         */
+  }
+}
+
+@keyframes rotate-six {
+  0% {
+    transform: rotate(170deg);
+  }
+  100% {
+    transform: rotate(180deg);
+    /**
+           * 22% => 39.6deg  
+           * 140.4 + 39.6 => 180deg
+           */
+  }
+}
+
+@keyframes fade-in {
+  0%,
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
 .documents-legend {
