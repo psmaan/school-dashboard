@@ -17,6 +17,18 @@ h4 {
   color: #777777;
 }
 
+@media (max-width: 1280px) {
+
+  h3 {
+    font-size: 12px;
+  }
+  
+  h4 {
+    font-size: 8px;
+  }
+
+  }
+
 /* male female students enrolled */
 
 .student-enrolled-container {
@@ -42,7 +54,7 @@ h4 {
 }
 
 .male-enrolled > img {
-  height: 350px;
+  height: 300px;
   position: relative;
   left: 10%;
 }
@@ -54,12 +66,17 @@ h4 {
   flex-direction: row;
   border-top-right-radius: 20px;
   align-items: center;
+  position: relative;
 }
 
 .female-enrolled > img {
-  height: 350px;
-  position: relative;
+  height: 300px;
+  position: absolute;
   top: -50px;
+}
+
+.enrolled-data.female {
+  margin-left: auto;
 }
 
 .enrolled-data {
@@ -95,6 +112,7 @@ h4 {
   font-size: 15px;
   font-weight: 300;
   padding: 0 10px;
+  text-align: center;
 }
 
 .enrolled-data.female > div {
@@ -103,6 +121,66 @@ h4 {
   justify-content: center;
   align-items: center;
   background-color: #fbe1f9;
+}
+
+@media (max-width: 1250px) {
+
+  .student-enrolled-container {
+    width: 89%;
+  }
+
+  .enrolled-data > h2 {
+    padding-left: 10px;
+  }
+
+  .enrolled-data > h1 {
+    margin-right: auto;
+    padding-left: 10px;
+  }
+
+  .male-enrolled > img {
+    height: 240px;
+  }
+
+  .female-enrolled > img {
+    height: 240px;
+    
+    position: relative;
+    top: 5px;
+  }
+  
+  .enrolled-data.female > h2 {
+    padding-right: 10px;
+    text-align: end;
+  }
+
+  .enrolled-data.female > h1 {
+    padding-right: 10px;
+    margin-left: auto;
+  }
+
+}
+
+@media (max-width: 770px) {
+  .student-enrolled-container {
+    width: 90%;
+    height: 400px;
+    flex-direction: column;
+    height: 400px;
+  }
+
+  .student-enrolled-container > div {
+    width: 100%;
+    height: 200px;
+  }
+
+  .female-enrolled {
+    border-radius: 0;
+  }
+
+  .male-enrolled {
+    border-top-right-radius: 16px;
+  }
 }
 
 /* Employee Payroll */
@@ -191,6 +269,9 @@ h4 {
   grid-auto-flow: column;
   height: 80%;
   align-items: end;
+  background-color: red;
+  justify-content: space-around;
+  overflow: scroll;
 }
 
 .graph-bar {
@@ -201,6 +282,7 @@ h4 {
   border-radius: 20px;
   display: flex;
   justify-content: flex-end;
+  min-width: 15px;
 }
 
 .graph-bar.a {
@@ -294,21 +376,30 @@ h4 {
 .graph-employee {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(20, 1fr);
+  grid-template-columns: repeat(20, 20px);
   grid-template-rows: 1fr;
-  grid-gap: 10px;
   grid-auto-flow: column;
+  justify-content: space-around;
+  overflow: scroll;
 }
 
 .employee-bar {
   font-size: 10px;
   display: flex;
+  width: 34px;
+  text-align: center;
+  min-width: 15px;
+}
+
+.payroll-stats-container {
+  display: flex;
+  flex-direction: row;
 }
 
 .payroll-stats-heading {
   background-color: #535353;
   height: 100%;
-  width: 5%;
+  width: 16%;
   z-index: 0;
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
@@ -338,7 +429,7 @@ h4 {
 .payroll-stats {
   display: flex;
   flex-direction: column;
-  width: 20%;
+  width: 75%;
   margin: auto;
   align-items: flex-end;
 }
@@ -384,6 +475,82 @@ h4 {
   color: #ff5a5a;
 }
 
+@media (max-width: 1250px) {
+
+  .payroll-container {
+    flex-direction: column;
+    height: 800px;
+  }
+
+  .payroll-stats {
+    flex-direction: row;
+  }
+
+  .payroll-chart-container {
+    width: 100%;
+  }
+
+  .payroll-stats-container {
+    flex-direction: column;
+  }
+
+  .payroll-stats-heading {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: relative;
+    top: -20px;
+    border-bottom-left-radius: 16px;
+    margin-bottom: 0;
+  }
+
+  .payroll-stats-heading > h3 {
+    transform: rotate(0deg);
+    position: relative;
+    top: 10px;
+    margin: auto;
+  }
+
+  .payroll-stats-heading >div {
+    position: relative;
+    top: 0;
+    height: 20px;
+    width: 20px;
+    background-color: white;
+  }
+
+  .payroll-stats {
+    justify-content: space-around;
+    width: 95%;
+    margin: auto;
+  }
+
+  .payroll-stats > div {
+    margin: 0;
+    padding-bottom: 20px;
+    width: 33%;
+  }
+
+  .graph-bar {
+  }
+
+  .graph-employee {
+
+  }
+
+  .employee-bar {
+    height: 34px;
+    transform: rotate(90deg);
+    line-height: 1.2ch;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+}
+
 /* Student Master Fee */
 
 .master-fee-container {
@@ -393,10 +560,6 @@ h4 {
   margin: auto;
   margin-top: 20px;
   border-radius: 20px;
-}
-
-.master-fee-container > * {
-  color: #8b8b8b;
 }
 
 .master-fee-navbar {
@@ -415,6 +578,14 @@ h4 {
   height: 80%;
 }
 
+.fee-container-double {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+
 .master-fee-selection > * {
   color: #8b8b8b;
 }
@@ -427,7 +598,7 @@ h4 {
 }
 
 .fee-overview {
-  width: 12%;
+  width: 28%;
   height: 100%;
   border-radius: 10px;
   background-color: white;
@@ -443,7 +614,7 @@ h4 {
   display: flex;
   align-items: center;
   flex-direction: row;
-  height: 100px;
+  height: 60px;
   margin-bottom: 0;
   margin-top: 10px;
 }
@@ -473,9 +644,7 @@ h4 {
   height: 2px;
   background-color: #e6e6e6;
   border-radius: 5px;
-  margin: auto;
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin: 10px auto;
 }
 
 .course-fee {
@@ -531,6 +700,7 @@ h4 {
   border: 1px solid #e6e6e6;
   border-radius: 20px;
   margin-left: 0.5%;
+  margin: 0 auto;
 }
 
 .school-fee-navbar {
@@ -541,10 +711,6 @@ h4 {
   justify-content: space-between;
   height: 20%;
   padding-top: 10px;
-}
-
-.school-fee-total {
-  margin-right: 50px;
 }
 
 .school-fee-header > h1,
@@ -568,18 +734,19 @@ h4 {
 
 .school-fee-data {
   width: 98%;
-  height: 80%;
   padding: 0 1%;
+  padding-bottom: 10px;
   margin: auto;
   display: flex;
   flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
 
 .installment {
   background-color: white;
-  width: 30%;
-  height: 80%;
+  width: 32%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   align-items: flex-end;
@@ -617,7 +784,7 @@ h4 {
 }
 
 .installment-fee > h4 {
-  font-size: 10px;
+  font-size: 8px;
   background-color: #f8fcf7;
   color: #71bc4d;
   border-radius: 10px;
@@ -650,7 +817,7 @@ h4 {
 }
 
 .learning-fee {
-  width: 35%;
+  width: 70%;
   height: 100%;
   border: 1px solid #e6e6e6;
   border-radius: 20px;
@@ -662,7 +829,57 @@ h4 {
   width: 70%;
 }
 
-/* Account Summary & CI Report */
+@media (max-width: 1280px) {
+
+  .fee-header > h1{
+    font-size: 30px;
+  }
+
+  .fee-overview > .course-fee {
+    margin-top: 20px;
+  }
+
+  .course-fee > h1,
+  .fee-info > div > h1 {
+    font-size: 20px;
+  }
+
+  .school-fee-navbar > div > h1 {
+    font-size: 25px;
+  }
+
+  .installment-fee {
+    width: 95%;
+  }
+
+}
+
+@media (max-width: 1024px) {
+
+  .master-fee-container {
+    height: 900px;
+    flex-direction: column;
+  }
+
+  .master-fee-content {
+    flex-direction: column;
+  }
+
+  .fee-container-double {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .school-fee {
+    width: 80%;
+    margin-top: 20px;
+  }
+
+
+}
+
+/* Account Summary & CIR */
 
 .accounts-cir-container {
   display: flex;
@@ -852,7 +1069,7 @@ h4.cas {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 10px 15px;
+  padding: 10px 5px;
 }
 
 .income-summary-navbar > h2 {
@@ -874,7 +1091,6 @@ h4.cas {
 }
 
 .total-income > h4 {
-  width: 50px;
   font-size: 15px;
   font-weight: 400;
 }
@@ -903,7 +1119,7 @@ h4.cas {
 }
 
 .last-month-income > h4 {
-  font-size: 10px;
+  font-size: 8px;
   font-weight: 400;
 }
 
@@ -916,9 +1132,11 @@ h4.cas {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  background-color: red;
 }
 
 .multi-graph {
+  transform: scale(0.9);
   width: 300px;
   height: 150px;
   position: relative;
@@ -979,6 +1197,7 @@ h4.cas {
       transition: 0.2s ease-in;
       transform-origin: 0 50% 0;
       opacity: 0;
+      margin: 0 auto;
     }
     &:hover {
       opacity: 0.8;
@@ -1105,6 +1324,46 @@ h4.cas {
   padding: 0 10px;
   background-color: #ffffffcc;
   border-radius: 10px;
+}
+
+@media (max-width: 1280px) {
+  .half-pie-income {
+    transform: scale(0.7);
+  }
+
+  h4.cas {
+    margin-top: 0;
+  }
+}
+
+@media (max-width: 1100px) {
+  .accounts-cir-container {
+    flex-direction: column;
+    height: 800px;
+  }
+
+  .accounts-cir-container > div {
+    width: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .accounts-cir-container > div {
+    flex-direction: column;
+  }
+
+  .accounts-container > div {
+    width: 80%;
+    margin: 10px 0;
+  }
+
+  .accounts-cir-container {
+    height: 1500px;
+  }
+
+  .half-pie-income {
+    transform: scale(1);
+  }
 }
 
 /* Employee Leave Allocation Dashboard */
@@ -1330,6 +1589,64 @@ h4.cas {
   border-radius: 5px;
 }
 
+.invisible {
+  opacity: 0;
+}
+
+.leave-allocation-legend{
+  display: flex;
+  flex-direction: row;
+  background-color: red;
+  width: 300px;
+  justify-content: space-around;
+}
+
+@media (max-width: 1150px) {
+  .employee-name > h3 {
+    font-size: 10px;
+  }
+
+  .employee-leave-grid {
+    overflow: hidden;
+  }
+
+  .leave-grid-item {
+    font-size: 9px;
+  }
+
+  .leave-allocation-legend{
+    flex-direction: column;
+    width: 100px;
+  }
+
+}
+
+@media (max-width: 850px) {
+  .leave-allocation-legend{
+    flex-direction: column;
+  }
+
+  .employee-leave-main-container {
+    flex-direction: column;
+  }
+
+  .employee-leave-main-container > div {
+    width: 80%;
+    margin: 10px auto;
+  }
+
+  .employee-leave-container {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 800px) {
+  .half-pie-documents {
+    transform: scale(0.5);
+  }
+}
+
 /* Documents, Charts and Complaints*/
 
 .documents-complaints-container {
@@ -1347,6 +1664,7 @@ h4.cas {
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  height: 300px;
 }
 
 .documents-container > div {
@@ -1495,13 +1813,20 @@ h4.cas {
 
 .half-pie-documents {
   width: 80%;
+  margin: 0 auto;
   height: 150px;
   margin-top: 20px;
+  transform: scale(1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .tagging-graph {
-  transform: scale(0.8) translateX(-8%);
+  transform: scale(0.8);
+  position: absolute;
 }
+
 
 .documents-legend {
   display: flex;
@@ -1509,13 +1834,15 @@ h4.cas {
   align-items: center;
   width: 100%;
   justify-content: center;
+  position: relative;
+  top: -20px;
 }
 
 .documents-legend > div {
   width: 5px;
   height: 5px;
   border-radius: 5px;
-  margin: 0 5px;
+  margin: 0 0 0 5px;
 }
 
 .documents-legend > h4 {
@@ -1530,6 +1857,7 @@ h4.cas {
 .expiring-documents-grid-container {
   display: grid;
   width: 100%;
+  height: 85%;
   grid-template-columns: 100%;
   grid-template-rows: repeat(9, 1fr);
 }
@@ -1543,7 +1871,6 @@ h4.cas {
 .expiring-grid-row > * {
   display: flex;
   align-items: center;
-  padding: 5px 0;
 }
 
 .expiring-grid-row > .expiring-color {
@@ -1695,6 +2022,7 @@ h4.cas {
 
 .center.single > h3 {
   color: #439bfd;
+  font-size: 15px;
 }
 
 .portion-block.single {
@@ -1848,6 +2176,7 @@ h4.cas {
   border-radius: 10px;
   height: 60px;
   margin: auto;
+  padding: 0 5px;
 }
 
 .average-heading {
@@ -1874,9 +2203,11 @@ h4.cas {
 }
 
 .average-info-numbers > h3 {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 600;
   color: #7761e8;
+  width: 140px;
+  text-align: end;
 }
 
 .average-info-numbers.blue > h3 {
@@ -2004,6 +2335,61 @@ h4.cas {
   margin-left: 1%;
 }
 
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .half-pie-documents {
+    transform: scale(0.8);
+  }
+
+  .pending-chart {
+    transform: scale(0.8);
+  }
+
+  .average-heading {
+    width: 80px;
+  }
+
+  .average-info {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 1024px) {
+  .documents-complaints-container {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 800px) {
+  .tagging-graph {
+    transform: scale(0.7);
+  }
+}
+
+@media (max-width: 650px) {
+  .documents-container {
+    flex-direction: column;
+    height: 900px;
+  }
+
+  .documents-container > div {
+    width: 80%;
+    height: 300px;
+  }
+
+  .documents-tagging-summary {
+    height: 500px;
+  }
+
+  .logs-container {
+    flex-direction: column;
+  }
+
+  .logs-container > div{
+    width: 100%;
+  }
+}
+
 /* Distribution Charts */
 
 .distribution-charts-container {
@@ -2064,7 +2450,7 @@ h4.cas {
   border-radius: 100%;
   transform: scale(1.2);
 }
-p.center {
+div.center {
   background: white;
   position: absolute;
   text-align: center;
@@ -2079,6 +2465,24 @@ p.center {
   border-radius: 50%;
   line-height: 35px;
   padding: 15% 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+div.center > * {
+  margin: 0;
+  padding: 0;
+}
+
+div.center > h3 {
+  font-size: 28px;
+}
+
+div.center > h4 {
+  position: relative;
+  top: -10px;
 }
 
 .portion-block {
@@ -2202,26 +2606,69 @@ p.center {
 .distribution-legend {
   width: 90%;
   display: grid;
-  margin: auto;
-  margin-top: 15px;
+  margin: 15px auto;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 40px 40px;
   grid-gap: 10px;
 }
 
 .distribution-legend-item {
-  background-color: #cddefa;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border-radius: 16px;
+  border-radius: 12px;
+}
+
+.distribution-legend-item > h3 {
+  font-size: 12px;
 }
 
 .distribution-legend-item > h4 {
   background-color: #ffffffcc;
   border-radius: 8px;
   padding: 0 10px;
+}
+
+.lightgreen-color {
+  background-color: #bcfdb9;
+}
+
+.cyan-color {
+  background-color: #c8f7f0;
+}
+
+@media (max-width: 1100px) {
+.distribution-charts-container {
+  height: 750px;
+}
+
+  .distribution-legend {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 40px);
+  }
+}
+
+@media (max-width: 850px) {
+  .distribution-pie-chart {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 650px) {
+  .distribution-charts-container {
+    flex-direction: column;
+    height: 1500px;
+  }
+
+  .distribution-chart {
+    width: 100%;
+  }
+  
+    .distribution-legend {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: 40px 40px;
+    }
 }
 
 /* Admissions and Enquiry */
@@ -2283,11 +2730,43 @@ p.center {
   margin: auto;
   margin-top: 20px;
   height: 150px;
+  background-color: red;
+}
+
+.slider-images {
+  width:50px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.slider-left {
+  height: 30px;
+  width: 30px;
+  border-radius: 30px;
+  background-color: white;
+  z-index: 0;
+  position: relative;
+}
+
+.slider-main {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 1;
+}
+
+.slider-right {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  background-color: white;
+  z-index: 0;
 }
 
 .recent-info {
   margin: auto;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -2629,6 +3108,9 @@ p.center {
   background-color: #30f800;
 }
 
+/* Employee Matrix */
+
+
 .profile-matrix-container {
   background-color: #f6fafe;
   border-radius: 16px;
@@ -2639,6 +3121,7 @@ p.center {
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: blue;
 }
 
 .profile-matrix {
@@ -2664,7 +3147,6 @@ p.center {
   border-radius: 5px;
   padding: 5px 10px;
   background-color: transparent;
-  color: #1b1bb7;
 }
 
 .matrix-grid-container {
@@ -2691,6 +3173,7 @@ p.center {
   grid-template-columns: repeat(10, 1fr);
   grid-template-rows: repeat(10, 40px);
   grid-gap: 5px;
+  overflow: scroll;
 }
 
 .matrix-grid-row-header {
