@@ -558,11 +558,9 @@ h4 {
 
 @media (max-width: 800px) {
   .payroll-stats {
-    background-color: red;
   }
 
   .payroll-stats > div {
-    background-color: blue;
   }
 
   .payroll-stats > div > h1 {
@@ -574,8 +572,34 @@ h4 {
   }
 }
 
-@media (max-width: 500px) {
+@media (max-width: 650px) {
 
+  .payroll-stats {
+    align-items: flex-start;
+  }
+
+  .payroll-stats > div > h1 {
+    font-size: 24px;
+    width: 100%;
+    text-align: end;
+  }
+  .payroll-stats > div > h3 {
+    font-size: 16px;
+    width: 100%;
+    text-align: end;
+  }
+
+}
+
+@media (max-width: 400px) {
+  .payroll-stats {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .payroll-stats > div {
+    width: 100%;
+  }
 }
 
 /* Student Master Fee */
@@ -594,7 +618,6 @@ h4 {
   flex-direction: row;
   justify-content: space-between;
   padding: 20px;
-  background-color: blue;
 }
 
 .master-fee-content {
@@ -855,6 +878,10 @@ h4 {
   width: 70%;
 }
 
+.school-fee-header > h3 {
+  width: 120%;
+}
+
 @media (max-width: 1280px) {
 
   .fee-header > h1{
@@ -910,10 +937,7 @@ h4 {
   }
 
   .master-fee-navbar {
-  }
-
-  .master-fee-navbar {
-    height: 10%;
+    height: 80px;
   }
 
   .master-fee-content {
@@ -933,21 +957,24 @@ h4 {
   .learning-fee {
     width: 90%;
     margin: 10px auto;
-    height: 1000px;
+    height: 650px;
     padding: 0;
   }
 
   .school-fee-navbar {
-    height: 15%;
+    height: 80px;
+  }
+
+  .school-fee-header {
+  }
+
+  .school-fee-header > h3 {
+    width: 200%;
   }
 
   .fee-overview {
     height: 320px;
     margin-top: 60px;
-  }
-
-  .learning-fee {
-    height: 620px;
   }
 
   .school-fee-data {
@@ -959,6 +986,8 @@ h4 {
 
   .installment {
     width: 90%;
+    margin: 5px auto;
+    padding: 5px;
   }
 
   .school-fee-data {
@@ -976,6 +1005,33 @@ h4 {
 
   .school-fee {
     width: 90%;
+  }
+
+  .master-fee-navbar {
+    flex-direction: column;
+    margin-bottom: 50px;
+    justify-content: flex-start;
+
+  }
+}
+
+@media (max-width: 380px) {
+  .school-fee-navbar > div > h1 {
+    font-size: 20px;
+  }
+
+  .school-fee-navbar > div > h3 {
+    font-size: 8px;
+  }
+
+  .school-fee-header > h3 {
+    width: 150%;
+  }
+}
+
+@media (max-width: 340px) {
+  .master-fee-navbar {
+    margin-bottom: 100px;
   }
 }
 
@@ -1232,7 +1288,6 @@ h4.cas {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: red;
 }
 
 .multi-graph {
@@ -1319,7 +1374,6 @@ h4.cas {
 }
 
 .income-logo {
-  background-color: red;
   height: 10px;
   width: 10px;
 }
@@ -1702,7 +1756,6 @@ h4.cas {
 .leave-allocation-legend{
   display: flex;
   flex-direction: row;
-  background-color: red;
   width: 300px;
   justify-content: space-around;
 }
@@ -2016,7 +2069,7 @@ h4.cas {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 20px 25px;
+  padding: 10px 25px 0 25px;
 }
 
 .school-complaint-navbar > h2 {
@@ -2029,20 +2082,21 @@ h4.cas {
   height: 500px;
   margin: auto;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .complaints {
-  height: 100%;
-  width: 50%;
+  height: 200px;
+  width: 100%;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   padding: 0 2.5px;
+  justify-content: space-between;
 }
 
 .pending-main {
-  width: 100%;
+  width: 49%;
   height: 150px;
   border: 1px solid #439bfd;
   border-radius: 16px;
@@ -2169,11 +2223,12 @@ h4.cas {
 
 .complaint-category-container {
   width: 95%;
-  margin: auto;
-  margin-top: 20px;
+  margin: 0 auto;
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 49% 49%;
   grid-template-rows: repeat(4, 60px);
+  justify-content: space-around;
+  margin-top: 80px;
 }
 
 .complaint-category {
@@ -2496,9 +2551,30 @@ h4.cas {
   }
 }
 
+@media (max-width: 500px) {
+  .complaints {
+    flex-direction: column;
+  }
+
+  .complaints > div {
+    width: 100%;
+    padding: 20px 10px;
+    margin-bottom: 0;
+  }
+
+  .complaint-category-container {
+    margin-top: 20px;
+  }
+
+  .complaint-category > h3 {
+    font-size: 8px;
+  }
+}
+
 /* Distribution Charts */
 
 .distribution-charts-container {
+  background-color: red;
   margin: auto;
   margin-top: 20px;
   width: 95%;
@@ -2832,43 +2908,62 @@ div.center > h4 {
 }
 
 .recents-slider {
-  width: 80%;
+  width: 90%;
   margin: auto;
   margin-top: 20px;
   height: 150px;
   background-color: red;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.recents-slider > img {
+  width: 25px;
+  height: 25px;
 }
 
 .slider-images {
-  width:50px;
+  margin: auto;
+  width: 80%;
   height: 100%;
   display: flex;
   flex-direction: row;
-}
-
-.slider-left {
-  height: 30px;
-  width: 30px;
-  border-radius: 30px;
-  background-color: white;
-  z-index: 0;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  overflow: visible;
   position: relative;
 }
 
+.slider-left {
+  height: 60px;
+  width: 60px;
+  border-radius: 40px;
+  background-color: white;
+  z-index: 0;
+  margin-right: 5px;
+}
+
 .slider-main {
-  height: 40px;
-  width: 40px;
+  height: 90px;
+  width: 90px;
   border-radius: 50%;
   background-color: white;
   z-index: 1;
+  position: absolute;
+  background: url(media/student2.webp);
+  background-position: center;
+  background-size: contain;
 }
 
 .slider-right {
-  height: 30px;
-  width: 30px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   background-color: white;
   z-index: 0;
+  margin-left: 5px;
 }
 
 .recent-info {
@@ -2881,10 +2976,14 @@ div.center > h4 {
 }
 
 .recent-info > h3 {
-  margin-top: 20px;
   font-size: 18px;
   font-weight: 600;
+  text-align: center;
+  width: 100%;
+
 }
+
+
 
 .recent-student-tags {
   display: flex;
@@ -2900,6 +2999,10 @@ div.center > h4 {
   margin: 10px 5px;
   font-weight: 400;
   border-radius: 8px;
+}
+
+h4.staff-child {
+  background-color: #F25D00;
 }
 
 .admission-list {
@@ -2975,11 +3078,45 @@ div.center > h4 {
 }
 
 .recent-card-image {
-  background-color: #30f800;
+  background: url(media/student1.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   border-radius: 250px;
   height: 50px;
   width: 50px;
   margin-right: 4%;
+}
+
+.student2 {
+  background: url(media/student2.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.student3 {
+  background: url(media/student3.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.student4 {
+  background: url(media/student4.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.student5 {
+  background: url(media/student5.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.student6 {
+  background: url(media/student6.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .recent-card-details {
@@ -3020,7 +3157,8 @@ div.center > h4 {
 }
 
 .insights-heading {
-  margin: auto;
+  margin: 0 auto;
+  align-self: center;
   height: 50%;
   width: 50%;
   margin-left: 20px;
@@ -3068,6 +3206,7 @@ div.center > h4 {
   height: 25%;
   display: flex;
   flex-direction: row;
+  justify-content: space-around;
   align-items: center;
   background-color: white;
   border-radius: 16px;
@@ -3075,27 +3214,27 @@ div.center > h4 {
 
 .insights-stat {
   height: 90%;
-  width: 25%;
+  width: 24%;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: flex-start;
+  justify-content: center;
   padding-left: 10px;
 }
 
 .insights-stat > h4 {
-  font-size: 15px;
+  font-size: 10px;
 }
 
 .stat-insight-numbers {
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  width: 80%;
+  width: 100%;
 }
 
 .stat-insight-numbers > h3 {
-  font-size: 35px;
+  font-size: 25px;
 }
 
 .stat-insight-numbers > .percent-increase {
@@ -3106,7 +3245,7 @@ div.center > h4 {
 }
 
 .stat-insight-numbers > .percent-increase > h4 {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 400;
 }
 
@@ -3143,8 +3282,11 @@ div.center > h4 {
 .enquiry-image {
   width: 30px;
   height: 30px;
-  background-color: #30f800;
   border-radius: 20px;
+}
+
+.enquiry-image > img {
+  height: 100%;
 }
 
 .enquiry-info {
@@ -3156,8 +3298,15 @@ div.center > h4 {
 .enquiry-graph {
   width: 30px;
   height: 30px;
-  background-color: #30f800;
   border-radius: 20px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.enquiry-graph > div {
+  transform: scale(0.5);
 }
 
 .roles-container {
@@ -3192,26 +3341,138 @@ div.center > h4 {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-around;
+  justify-content: flex-start;
 }
 
 .role-flower {
   width: 30px;
   height: 30px;
-  background-color: #30f800;
   border-radius: 20px;
+  margin-left: 10px;
+}
+
+.role-flower > img {
+  height: 100%;
 }
 
 .role-info {
   display: flex;
   flex-direction: column;
   width: 50%;
+  margin-left: 10px;
 }
 
 .role-images {
-  width: 100px;
-  height: 30px;
-  background-color: #30f800;
+  width: 150px;
+  height: 50px;
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.role-image {
+  height: 50px;
+  width: 50px;
+  background: url(media/student1.webp);
+  background-position: center;
+  background-size: cover;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.role2 {
+  background: url(media/student2.webp);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 30px;
+}
+
+.role3 {
+  background: url(media/student3.webp);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 60px;
+}
+
+.role4 {
+  background: url(media/student4.webp);
+  background-position: center;
+  background-size: cover;
+  position: absolute;
+  left: 90px;
+}
+
+
+.admin {
+  background-color: #D5E9FE;
+}
+.teacher {
+  background-color: #DCCCFB;
+}
+.receptionist {
+  background-color: #BCFDB9;
+}
+.students {
+  background-color: #FFD9AC;
+}
+.accountant {
+  background-color: #FEFDB9;
+}
+.librarian {
+  background-color: #FBCCCB;
+}
+
+@media (max-width: 1080px) {
+  .admissions-enquiry-roles-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(4, 300px);
+    grid-gap: 1%;
+    margin-bottom: 80px;
+  }
+
+  .recent-admission-list > h4 {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 800px) {
+  .role-images {
+    transform: scale(0.8);
+  }
+}
+
+@media (max-width: 550px) {
+  .admissions-enquiry-roles-container {
+    grid-template-rows: 550px 550px 650px 500px;
+  }
+
+  .student-admissions {
+    height: 1100px;
+    grid-template-columns: 100%;
+    grid-template-rows: 540px 540px;
+  }
+
+  .recent-admission-card {
+    margin:  auto;
+  }
+
+  .enquiry-container {
+    flex-direction: column;
+  }
+
+  .enquiry-container > div {
+    width: 100%;
+  }
+
+  .permissions-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(6, 60px);
+  }
 }
 
 /* Employee Matrix */
@@ -3220,7 +3481,7 @@ div.center > h4 {
 .profile-matrix-container {
   background-color: #f6fafe;
   border-radius: 16px;
-  height: 560px;
+  height: 580px;
   width: 95%;
   margin: auto;
   margin-top: 20px;
@@ -3241,18 +3502,21 @@ div.center > h4 {
 .profile-matrix-navbar {
   width: 90%;
   margin: auto;
-  margin-top: 20px;
+  margin-top: 10px;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
+  height: 60px;
 }
 
 .matrix-selection > button {
-  border: none;
-  border-radius: 5px;
-  padding: 5px 10px;
+  color: #1B1BB7;
   background-color: transparent;
+  border-radius: 5px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 20px;
 }
 
 .matrix-grid-container {
@@ -3261,6 +3525,10 @@ div.center > h4 {
   width: 100%;
   margin: auto;
   height: 100%;
+}
+
+.employee-matrix {
+  display: none;
 }
 
 .matrix-legend-grid {
@@ -3294,7 +3562,8 @@ div.center > h4 {
   height: 30px;
   width: 30px;
   border-radius: 15px;
-  background-color: red;
+  background: url(media/icons8-asterisk-48.png);
+  background-size: contain;
   margin: 0 4%;
 }
 

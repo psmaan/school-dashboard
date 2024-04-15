@@ -1028,30 +1028,6 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="complaint-category-container">
-                            <div class="complaint-category">
-                                <div class="complaint-category-image"></div>
-                                <h3>Study Related</h3>
-                                <h4>576</h4>
-                            </div>
-                            <div class="complaint-category improper-facility">
-                                <div class="complaint-category-image"></div>
-                                <h3>Improper Facility</h3>
-                                <h4>576</h4>
-                            </div>
-                            <div class="complaint-category water-lodging">
-                                <div class="complaint-category-image"></div>
-                                <h3>Water Lodging</h3>
-                                <h4>576</h4>
-                            </div>
-                            <div class="complaint-category poor-study">
-                                <div class="complaint-category-image"></div>
-                                <h3>Poor Study</h3>
-                                <h4>576</h4>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="resolved-complaints complaints">
                         <div class="pending-main">
                             <div class="pending-info">
                                 <div class="pending-info-total">
@@ -1076,6 +1052,8 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
+                    <div class="resolved-complaints complaints">
                         <div class="complaint-category-container resolved-category">
                             <div class="complaint-category seating-facilities">
                                 <div class="complaint-category-image"></div>
@@ -1095,6 +1073,28 @@
                             <div class="complaint-category misbehaviour-issues">
                                 <div class="complaint-category-image"></div>
                                 <h3>Misbehaviour Issues</h3>
+                                <h4>576</h4>
+                            </div>
+                   <!--     </div>
+                        <div class="complaint-category-container"> -->
+                            <div class="complaint-category">
+                                <div class="complaint-category-image"></div>
+                                <h3>Study Related</h3>
+                                <h4>576</h4>
+                            </div>
+                            <div class="complaint-category improper-facility">
+                                <div class="complaint-category-image"></div>
+                                <h3>Improper Facility</h3>
+                                <h4>576</h4>
+                            </div>
+                            <div class="complaint-category water-lodging">
+                                <div class="complaint-category-image"></div>
+                                <h3>Water Lodging</h3>
+                                <h4>576</h4>
+                            </div>
+                            <div class="complaint-category poor-study">
+                                <div class="complaint-category-image"></div>
+                                <h3>Poor Study</h3>
                                 <h4>576</h4>
                             </div>
                         </div>
@@ -1387,12 +1387,13 @@
                     <div class="recents-list">
                         <h4>Recent Admissions</h4>
                         <div class="recents-slider">
+                            <img onclick="prevAdmission()" src="media/left-arrow.png">
                             <div class="slider-images">
                                 <div class="slider-left"></div>
                                 <div class="slider-main"></div>
                                 <div class="slider-right"></div>
                             </div>
-
+                            <img onclick="nextAdmission()" src="media/right-arrow.png">
                         </div>
                         <div class="recent-info">
                             <h3>Mahesh Kumar Kumawat</h3>
@@ -1431,7 +1432,7 @@
                 <div class="recent-admission-list">
                     <h4>Recent Admission Student List</h4>
                     <div class="recent-admission-card">
-                        <div class="recent-card-image">
+                        <div class="recent-card-image student1">
 
                         </div>
                         <div class="recent-card-details">
@@ -1443,7 +1444,7 @@
                         </div>
                     </div>
                     <div class="recent-admission-card">
-                        <div class="recent-card-image">
+                        <div class="recent-card-image student2">
 
                         </div>
                         <div class="recent-card-details">
@@ -1455,7 +1456,7 @@
                         </div>
                     </div>
                     <div class="recent-admission-card">
-                        <div class="recent-card-image">
+                        <div class="recent-card-image student3">
 
                         </div>
                         <div class="recent-card-details">
@@ -1467,7 +1468,7 @@
                         </div>
                     </div>
                     <div class="recent-admission-card">
-                        <div class="recent-card-image">
+                        <div class="recent-card-image student4">
 
                         </div>
                         <div class="recent-card-details">
@@ -1479,7 +1480,7 @@
                         </div>
                     </div>
                     <div class="recent-admission-card">
-                        <div class="recent-card-image">
+                        <div class="recent-card-image student5">
 
                         </div>
                         <div class="recent-card-details">
@@ -1491,7 +1492,7 @@
                         </div>
                     </div>
                     <div class="recent-admission-card">
-                        <div class="recent-card-image">
+                        <div class="recent-card-image student6">
 
                         </div>
                         <div class="recent-card-details">
@@ -1566,43 +1567,79 @@
                     <P>...</P>
                 </div>
                 <div class="enquiry-category">
-                    <div class="enquiry-image"></div>
+                    <div class="enquiry-image">
+                        <img src="media/icons8-asterisk-48.png">
+                    </div>
                     <div class="enquiry-info">
                         <h3>Open Enquiry</h3>
                         <h4>12 Enquiries</h4>
                     </div>
                     <div class="enquiry-graph">
-
+                            <div class="donut-chart-block block single"> 
+                                <div class="donut-chart single">
+                                    <div id="part1" class="portion-block single"><div class="circle single"></div></div>
+                                    <div class="center single">
+                                        <h3>50%</h3>
+                                    </div>        
+                                </div>
+                            </div>
                     </div>
                 </div>
                 <div class="enquiry-category">
-                    <div class="enquiry-image"></div>
+                    <div class="enquiry-image">
+                        <img src="media/icons8-asterisk-48.png">
+                    </div>
                     <div class="enquiry-info">
-                        <h3>Open Enquiry</h3>
+                        <h3>Partially Closed</h3>
                         <h4>12 Enquiries</h4>
                     </div>
                     <div class="enquiry-graph">
-                        
+                        <div class="donut-chart-block block single"> 
+                            <div class="donut-chart single">
+                                <div id="part1" class="portion-block single"><div class="circle single"></div></div>
+                                <div class="center single">
+                                    <h3>50%</h3>
+                                </div>        
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="enquiry-category">
-                    <div class="enquiry-image"></div>
+                    <div class="enquiry-image">
+                        <img src="media/icons8-asterisk-48.png">
+                    </div>
                     <div class="enquiry-info">
-                        <h3>Open Enquiry</h3>
+                        <h3>Closed to Admission</h3>
                         <h4>12 Enquiries</h4>
                     </div>
                     <div class="enquiry-graph">
-                        
+                        <div class="donut-chart-block block single"> 
+                            <div class="donut-chart single">
+                                <div id="part1" class="portion-block single"><div class="circle single"></div></div>
+                                <div class="center single">
+                                    <h3>50%</h3>
+                                </div>        
+                            </div>
+                        </div>
                     </div>
                 </div>
                 <div class="enquiry-category">
-                    <div class="enquiry-image"></div>
+                    <div class="enquiry-image">
+                        <img src="media/icons8-asterisk-48.png">
+                    </div>
                     <div class="enquiry-info">
-                        <h3>Open Enquiry</h3>
+                        <h3>Missed to Convert</h3>
                         <h4>12 Enquiries</h4>
                     </div>
                     <div class="enquiry-graph">
-                        
+                        <div class="donut-chart-block block single"> 
+                            <div class="donut-chart single">
+                                <div id="part1" class="portion-block single"><div class="circle single"></div></div>
+                                <div class="center single">
+                                    <h3>50%</h3>
+                                </div>        
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -1613,64 +1650,94 @@
                 <P>...</P>
             </div>
             <div class="permissions-grid">
-                <div class="role-permissions">
-                    <div class="role-flower"></div>
+                <div class="role-permissions admin">
+                    <div class="role-flower">
+                        <img src="media/icons8-asterisk-48.png">
+                    </div>
                     <div class="role-info">
                         <h3>Admin</h3>
                         <h4>02 People</h4>
                     </div>
                     <div class="role-images">
-                        
+                        <div class="role-image"></div>
+                        <div class="role-image role2"></div>
+                        <div class="role-image role3"></div>
+                        <div class="role-image role4"></div>
                     </div>
                 </div>
-                <div class="role-permissions">
-                    <div class="role-flower"></div>
+                <div class="role-permissions teacher">
+                    <div class="role-flower">
+                        <img src="media/icons8-asterisk-48.png">
+                    </div>
                     <div class="role-info">
-                        <h3>Admin</h3>
+                        <h3>Teacher</h3>
                         <h4>02 People</h4>
                     </div>
                     <div class="role-images">
-                        
+                        <div class="role-image"></div>
+                        <div class="role-image role2"></div>
+                        <div class="role-image role3"></div>
+                        <div class="role-image role4"></div>
                     </div>
                 </div>
-                <div class="role-permissions">
-                    <div class="role-flower"></div>
+                <div class="role-permissions accountant">
+                    <div class="role-flower">
+                        <img src="media/icons8-asterisk-48.png">
+                    </div>
                     <div class="role-info">
-                        <h3>Admin</h3>
+                        <h3>Accountant</h3>
                         <h4>02 People</h4>
                     </div>
                     <div class="role-images">
-                        
+                        <div class="role-image"></div>
+                        <div class="role-image role2"></div>
+                        <div class="role-image role3"></div>
+                        <div class="role-image role4"></div>
                     </div>
                 </div>
-                <div class="role-permissions">
-                    <div class="role-flower"></div>
+                <div class="role-permissions librarian">
+                    <div class="role-flower">
+                        <img src="media/icons8-asterisk-48.png">
+                    </div>
                     <div class="role-info">
-                        <h3>Admin</h3>
+                        <h3>Librarian</h3>
                         <h4>02 People</h4>
                     </div>
                     <div class="role-images">
-                        
+                        <div class="role-image"></div>
+                        <div class="role-image role2"></div>
+                        <div class="role-image role3"></div>
+                        <div class="role-image role4"></div>
                     </div>
                 </div>
-                <div class="role-permissions">
-                    <div class="role-flower"></div>
+                <div class="role-permissions receptionist">
+                    <div class="role-flower">
+                        <img src="media/icons8-asterisk-48.png">
+                    </div>
                     <div class="role-info">
-                        <h3>Admin</h3>
+                        <h3>Receptionist</h3>
                         <h4>02 People</h4>
                     </div>
                     <div class="role-images">
-                        
+                        <div class="role-image"></div>
+                        <div class="role-image role2"></div>
+                        <div class="role-image role3"></div>
+                        <div class="role-image role4"></div>
                     </div>
                 </div>
-                <div class="role-permissions">
-                    <div class="role-flower"></div>
+                <div class="role-permissions students">
+                    <div class="role-flower">
+                        <img src="media/icons8-asterisk-48.png">
+                    </div>
                     <div class="role-info">
-                        <h3>Admin</h3>
+                        <h3>Students</h3>
                         <h4>02 People</h4>
                     </div>
                     <div class="role-images">
-                        
+                        <div class="role-image"></div>
+                        <div class="role-image role2"></div>
+                        <div class="role-image role3"></div>
+                        <div class="role-image role4"></div>
                     </div>
                 </div>
             </div>
@@ -1681,15 +1748,449 @@
             <div class="profile-matrix-navbar">
                 <h3>Student & Employee Profile Matrix</h3>
                 <div class="matrix-selection">
-                    <button>Student Matrix</button>
-                    <button>Employee Matrix</button>
+                    <button class="student-matrix-button" onclick="showStudent()">Student Matrix</button>
+                    <button class="employee-matrix-button" onclick="showEmployee()">Employee Matrix</button>
                 </div>
             </div>
-            <div class="matrix-grid-container">
+            <div class="matrix-grid-container student-matrix">
                 <div class="matrix-legend-grid">
                     <div></div>
                     <div class="matrix-legend-grid-row">
+                        <h3>Student</h3>
+                    </div>
+                    <div class="matrix-legend-grid-row">
                         <h3>Good</h3>
+                    </div>
+                    <div class="matrix-legend-grid-row">
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-legend-grid-row">
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-legend-grid-row">
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-legend-grid-row">
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-legend-grid-row">
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-legend-grid-row">
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-legend-grid-row">
+                        <h3>Good</h3>
+                    </div>
+                </div>
+                <div class="matrix-grid">
+                    <div class="matrix-grid-row-header">
+                        <div class="matrix-flower"></div>
+                        <h4>Basic Information</h4>
+                    </div>
+                    <div class="matrix-grid-row-header">
+                        <div class="matrix-flower"></div>
+                        <h4>Basic Information</h4>
+                    </div>
+                    <div class="matrix-grid-row-header">
+                        <div class="matrix-flower"></div>
+                        <h4>Basic Information</h4>
+                    </div>
+                    <div class="matrix-grid-row-header">
+                        <div class="matrix-flower"></div>
+                        <h4>Basic Information</h4>
+                    </div>
+                    <div class="matrix-grid-row-header">
+                        <div class="matrix-flower"></div>
+                        <h4>Basic Information</h4>
+                    </div>
+                    <div class="matrix-grid-row-header">
+                        <div class="matrix-flower"></div>
+                        <h4>Basic Information</h4>
+                    </div>
+                    <div class="matrix-grid-row-header">
+                        <div class="matrix-flower"></div>
+                        <h4>Basic Information</h4>
+                    </div>
+                    <div class="matrix-grid-row-header">
+                        <div class="matrix-flower"></div>
+                        <h4>Basic Information</h4>
+                    </div>
+                    <div class="matrix-grid-row-header">
+                        <div class="matrix-flower"></div>
+                        <h4>Basic Information</h4>
+                    </div>
+                    <div class="matrix-grid-row-header">
+                        <div class="matrix-flower"></div>
+                        <h4>Basic Information</h4>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                    <div class="matrix-grid-row">
+                        <div class="matrix-graph"></div>
+                        <h3>Good</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="matrix-grid-container employee-matrix">
+                <div class="matrix-legend-grid">
+                    <div></div>
+                    <div class="matrix-legend-grid-row">
+                        <h3>Employee</h3>
                     </div>
                     <div class="matrix-legend-grid-row">
                         <h3>Good</h3>
@@ -2123,6 +2624,100 @@
     </div>
   </body>
   <script>
+
+    function showStudent() {
+        const student = document.querySelector(".student-matrix");
+        const employee = document.querySelector(".employee-matrix");
+        const sbutton = document.querySelector(".student-matrix-button");
+        const ebutton = document.querySelector(".employee-matrix-button");
+        student.style.display = "flex";
+        employee.style.display = "none";
+        sbutton.style.color = "white";
+        sbutton.style.backgroundColor = "#1B1BB7";
+        ebutton.style.backgroundColor = "white";
+        ebutton.style.color = "#1B1BB7";
+    }
+    function showEmployee() {
+        const student = document.querySelector(".student-matrix");
+        const employee = document.querySelector(".employee-matrix");
+        const sbutton = document.querySelector(".student-matrix-button");
+        const ebutton = document.querySelector(".employee-matrix-button");
+        student.style.display = "none";
+        employee.style.display = "flex";
+        ebutton.style.color = "white";
+        ebutton.style.backgroundColor = "#1B1BB7";
+        sbutton.style.backgroundColor = "white";
+        sbutton.style.color = "#1B1BB7";
+    }
+
+    let count = 2;
+    const selected = document.querySelector(".recent-admission-list > div:nth-child("+count+")");
+    selected.style.backgroundColor = "#E7EFFC";
+
+    function nextAdmission() {
+
+        if (count == 7 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student1.webp')";
+        } else if (count == 2 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student2.webp')";
+        } else if (count == 3 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student3.webp')";
+        } else if (count == 4 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student4.webp')";
+        } else if (count == 5 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student5.webp')";
+        } else if (count == 6 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student6.webp')";
+        }
+        document.querySelector(".slider-main").style.backgroundSize = "cover";
+        document.querySelector(".slider-main").style.backgroundPosition = "center";
+
+        if (count == 7) {
+            document.querySelector(".recent-admission-list > div:nth-child(2)").style.backgroundColor = "#E7EFFC";
+            document.querySelector(".recent-admission-list > div:nth-child("+(count)+")").style.backgroundColor = "#f7f7f7";
+            count = 2;
+        } else {
+            count++;
+        }
+        console.log(count);
+        document.querySelector(".recent-admission-list > div:nth-child("+(count - 1)+")").style.backgroundColor = "#f7f7f7";
+        const selected = document.querySelector(".recent-admission-list > div:nth-child("+count+")");
+        selected.style.backgroundColor = "#E7EFFC";
+    } 
+
+    function prevAdmission() {
+
+        if (count == 3 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student1.webp')";
+        } else if (count == 4 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student2.webp')";
+        } else if (count == 5 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student3.webp')";
+        } else if (count == 6 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student4.webp')";
+        } else if (count == 7 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student5.webp')";
+        } else if (count == 2 ) {
+            document.querySelector(".slider-main").style.background = "url('media/student6.webp')";
+        }
+        document.querySelector(".slider-main").style.backgroundSize = "cover";
+        document.querySelector(".slider-main").style.backgroundPosition = "center";
+
+        if (count == 2) {
+            document.querySelector(".recent-admission-list > div:nth-child(7)").style.backgroundColor = "#E7EFFC";
+            document.querySelector(".recent-admission-list > div:nth-child(2)").style.backgroundColor = "#f7f7f7";
+            count = 7;
+        } else {
+            count--;
+        }
+        console.log(count);
+        document.querySelector(".recent-admission-list > div:nth-child("+(count + 1)+")").style.backgroundColor = "#f7f7f7";
+        const selected = document.querySelector(".recent-admission-list > div:nth-child("+count+")");
+        selected.style.backgroundColor = "#E7EFFC";
+    }
+
+
+
 
   </script>
 </html>
